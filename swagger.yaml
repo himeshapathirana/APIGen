@@ -1,17 +1,20 @@
 openapi: 3.0.0
 info:
-  title: Sample API
-  description: API doc
+  title: Example API
+  description: A simple API to demonstrate Swagger UI
   version: 1.0.0
+servers:
+  - url: http://localhost:3000
 paths:
   /:
     get:
-      summary: Returns a greeting
+      summary: "Hello World"
+      description: "Returns a simple hello world message"
       responses:
         '200':
-          description: Greeting response
+          description: "A hello world response"
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
-                example: Hello world!
+                example: "Hello world!"
